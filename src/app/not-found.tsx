@@ -1,8 +1,8 @@
 "use client"
-export default function Home() {
+export default function NotFound() {
   return(
     <div className="">
-      Hello
+      Not Found
     </div>
   )
 }
