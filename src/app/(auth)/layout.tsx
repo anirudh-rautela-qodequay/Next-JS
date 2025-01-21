@@ -3,16 +3,22 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navlinks = [
-  { href: "/order", name: "Order" },
+  { href: "/", name: "Home" },
   { href: "/register", name: "Register" },
   { href: "/login", name: "Login" },
 ];
 
-export default function Home() {
+
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   const pathname = usePathname();
+
   return (
     <>
-    <h1>Home</h1>
       {navlinks.map((link, index) => {
         const isActive = pathname.startsWith(link.href) ;
         return (
@@ -21,6 +27,7 @@ export default function Home() {
             {link.name}
         </Link>
       )})}
+        {children}
     </>
   );
 }
