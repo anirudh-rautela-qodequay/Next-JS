@@ -23,6 +23,9 @@ export const generateMetadata = async ({
 };
 
 export default function ProductDetails({ params }: Props) {
+  if(isNaN(params.productId))
+    notFound()
+
   if(parseInt(params.productId)>100)
     notFound()
 

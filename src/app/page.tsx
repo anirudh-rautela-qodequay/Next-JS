@@ -6,6 +6,7 @@ const navlinks = [
   { href: "/order", name: "Order" },
   { href: "/register", name: "Register" },
   { href: "/login", name: "Login" },
+  { href: "/products", name: "Products" },
 ];
 
 export default function Home() {
