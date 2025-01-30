@@ -7,8 +7,8 @@ export default function Home() {
     console.log("Button Clicked")
     // router.push("/register")
     // router.replace("/login")
-    // router.back()
-    router.forward()
+    router.back()
+    // router.forward()
   }
 
   return (
